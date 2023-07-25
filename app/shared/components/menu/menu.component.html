@@ -1,0 +1,16 @@
+<h2>Menu Component</h2>
+
+<button mat-button [matMenuTriggerFor]="belowMenu">Below</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item (click)="getValue('item1')">Item 1</button>
+  <button mat-menu-item (click)="getValue('item2')">Item 2</button>
+</mat-menu>
+
+<hr>
+<button [matMenuTriggerFor]="matMenu" mat-raised-button color="primary">Check Menu</button>
+
+<mat-menu #matMenu>
+    <button mat-menu-item>Office</button>
+    <button mat-menu-item>Hybrid</button>
+    <button mat-menu-item>Work from home</button>
+</mat-menu>
